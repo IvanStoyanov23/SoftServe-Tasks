@@ -4,11 +4,9 @@ import java.util.Scanner;
 public class Task_4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Guess the number! Please enter number: ");
+        System.out.println("Guess the number!");
 
-        int input = scanner.nextInt();
-
-        int max = 10;
+        int max = 100;
         int min = 1;
         int range = max - min + 1;
 
@@ -19,9 +17,9 @@ public class Task_4 {
         int leftAttempt = 9;
 
         for (int i = 1; i <= 10; i++) {
-            input = scanner.nextInt();
+            System.out.print("Please enter number: ");
+            int input = scanner.nextInt();
 
-            System.out.format("Attempt left: %d \n", leftAttempt);
 
             if (input == randomNum) {
                 System.out.println("Congrats, you guessed the number: " + randomNum);
@@ -32,6 +30,7 @@ public class Task_4 {
                 System.out.println("The number you've entered is lower than the gussing number!");
             }
 
+            System.out.format("Attempt left: %d \n", leftAttempt);
             leftAttempt--;
         }
     }
