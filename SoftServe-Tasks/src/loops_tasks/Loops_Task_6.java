@@ -24,6 +24,7 @@ public class Loops_Task_6 {
         double daysRate = (10 * currentDayDistance) / 100;
 
         do{
+
             currentDayDistance = currentDayDistance + daysRate;
             daysRate = (10 * currentDayDistance) / 100;
 
@@ -33,7 +34,6 @@ public class Loops_Task_6 {
 
             totalDistance += currentDayDistance;
             k2++;
-
         }while(totalDistance <= 100 || currentDayDistance <= 20);
 
 

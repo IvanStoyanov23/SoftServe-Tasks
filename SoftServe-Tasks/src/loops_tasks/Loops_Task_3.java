@@ -7,20 +7,25 @@ public class Loops_Task_3 {
         Scanner scanner = new Scanner(System.in);
 
         int n = scanner.nextInt();
-        int sum = 0;
 
-        int f = 1;
+        long sum = 0;
 
         for (int i = 1; i <= n; i++) {
 
-            for (int j = 1; j <= i; j++) {
-                f = f * j;
-            }
+            long f = getFactorial(i);
             sum = sum + f;
-            f = 1;
         }
 
         System.out.println("Factorial sum is: " + sum);
+    }
+
+//    Factorial recursion
+    public static long getFactorial(int num)
+    {
+        if (num >= 1)
+            return num * getFactorial(num - 1);
+        else
+            return 1;
     }
 
 
