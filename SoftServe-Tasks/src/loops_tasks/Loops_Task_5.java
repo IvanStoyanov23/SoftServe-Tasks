@@ -7,7 +7,10 @@ public class Loops_Task_5 {
 //    the specified n is entered .
 
     public static void main(String[] args) {
+        int sum = 0;
+        double average = 0;
         Scanner scanner = new Scanner(System.in);
+        ArrayList<Integer> arrNums = new ArrayList<Integer>();
 
         System.out.println("Enter special number:");
         int n = scanner.nextInt();
@@ -15,21 +18,20 @@ public class Loops_Task_5 {
 
         int input = scanner.nextInt();
 
-        int sum = 0;
-
-        ArrayList<Integer> arrNums = new ArrayList<Integer>();
-
-        while (input != n) {
-            arrNums.add(input);
+        while (input < n) {
+            if (input >= 0) {
+                arrNums.add(input);
+            }
             input = scanner.nextInt();
         }
 
-        for (int i = 0; i < arrNums.size(); i++) {
-            if (arrNums.get(i) >= 0) {
-                sum += arrNums.get(i);
-            }
+        for (int number : arrNums) {
+            sum += number;
         }
 
-        System.out.println(sum);
+        average = sum / arrNums.size();
+
+        System.out.println("The sum is: " + sum);
+        System.out.println("The average is: "+ average);
     }
 }

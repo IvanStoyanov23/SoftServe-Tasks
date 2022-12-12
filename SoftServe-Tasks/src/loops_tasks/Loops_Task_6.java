@@ -20,11 +20,13 @@ public class Loops_Task_6 {
         double firstDayDistance = scanner.nextDouble();
 
         double totalDistance = firstDayDistance;
-        double daysRate = firstDayDistance / 100;
         double currentDayDistance = firstDayDistance;
+        double daysRate = (10 * currentDayDistance) / 100;
 
         do{
-            currentDayDistance = currentDayDistance + (currentDayDistance * daysRate);
+
+            currentDayDistance = currentDayDistance + daysRate;
+            daysRate = (10 * currentDayDistance) / 100;
 
             if (currentDayDistance <= 20){
                 k1++;
@@ -32,7 +34,6 @@ public class Loops_Task_6 {
 
             totalDistance += currentDayDistance;
             k2++;
-
         }while(totalDistance <= 100 || currentDayDistance <= 20);
 
 

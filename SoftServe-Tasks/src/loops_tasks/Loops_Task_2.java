@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Loops_Task_2 {
-//    2. Processing the data while entering  n integers from the keyboard, find
+//    2. Processing the data while entering n integers from the keyboard, find
 //    their sum.
 
     public static void main(String[] args) {
