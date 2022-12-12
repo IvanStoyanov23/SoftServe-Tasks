@@ -4,8 +4,8 @@ public class Loops_Task_8{
 
     public static void main(String[] args) {
         int[][] matrix = {{1, 5, 8},
-                {8, 4, 4},
-                {6, 9, 3}};
+                          {8, 4, 4},
+                          {6, 9, 3}};
 
         int biggestNum = matrix[0][0];
         int biggestNumRowIndex = 0;
