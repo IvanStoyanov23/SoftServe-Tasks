@@ -14,12 +14,12 @@ public class Loops_Task_5 {
 
         System.out.println("Enter special number:");
         int n = scanner.nextInt();
-
         System.out.println("Special number: " + n);
+
         int input = scanner.nextInt();
 
-        while (input != n) {
-            if (n >= 0) {
+        while (input < n) {
+            if (input >= 0) {
                 arrNums.add(input);
             }
             input = scanner.nextInt();
